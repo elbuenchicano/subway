@@ -1,0 +1,17 @@
+{
+	"op_type"			: "filter_train_test",
+	
+	"filter_train_test"	: {
+		"directory"	: "y:/Anomalies/subway/entrance/test12",
+		"token"		: "trk",
+		"end_train"	: 30000,
+		"out"		: "y:/Anomalies/subway/entrance/test12"
+	},
+	"matching_outputs"  : {
+		"directory"		: "Y:/Anomalies/subway/entrance/temporal/clusters/Auto_Recu_15/Spectral_c16/Spectral_c16",
+		"token"			: "lst",
+		"afile"			: "Y:/Anomalies/subway/entrance/anomaly_tracks.lst" ,
+		"out_dir"		: "Y:/Anomalies/subway/entrance/out",
+		"out_token"		: "spectral_c16_anom"
+	}
+}
