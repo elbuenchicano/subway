@@ -1,17 +1,45 @@
 {
-	"op_type"			: "filter_train_test",
+	"op_type"			: "filter_range",
 	
 	"filter_train_test"	: {
-		"directory"	: "y:/Anomalies/subway/entrance/test12",
+		"directory"	: "y:/Anomalies/train/test2",
 		"token"		: "trk",
-		"end_train"	: 30000,
-		"out"		: "y:/Anomalies/subway/entrance/test12"
+		"end_train"	: 4000,
+		"out"		: "y:/Anomalies/train/test2"
 	},
+	
+	"filter_range"	: {
+		"directory"	: "y:/Anomalies/train/test2",
+		"token"		: "trk",
+		"frame_ini"	: 13000,
+		"frame_fin"	: 18000,
+		"out_token"	: "test",
+		"out"		: "y:/Anomalies/train/test3"
+	},
+	
 	"matching_outputs"  : {
 		"directory"		: "Y:/Anomalies/subway/entrance/temporal/clusters/Auto_Recu_15/Spectral_c16/Spectral_c16",
 		"token"			: "lst",
 		"afile"			: "Y:/Anomalies/subway/entrance/anomaly_tracks.lst" ,
 		"out_dir"		: "Y:/Anomalies/subway/entrance/out",
 		"out_token"		: "spectral_c16_anom"
+	},
+	"train_seq"			: {
+		"gt_folder"		: "y:/Anomalies/train/gt_imgs",
+		"token" 		: "png",
+		"out"			: "y:/Anomalies/train/gt/train.gt",
+		"add"			: 800,
+		"th_rate"		: 0.05
+		
+	},
+	"camera_train_test": {
+		"directory"		: "Y:/research/suported/fwdlistadevideos/reduced1/anomalia",
+		"token"			: "txt",
+		"dir_target"	: "Y:/research/suported/trks",
+		"ext_target"	: "ft",
+		"out_dir"		: "y:/Anomalies/lab/lists2",
+		"out_token"		: "anomalies",
+		"in_token"		: "_128",
+		"th_day"		: "5.04"		
 	}
 }
